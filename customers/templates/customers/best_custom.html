@@ -1,0 +1,26 @@
+{% extends 'shop/base.html' %}
+
+{% block content %}
+
+<table class="table-cart" border="1px">
+    <thead>
+      <tr>
+        <th>Категория</th>
+        <th>Количество заказов</th>
+<!--         <th>Почта</th>
+        <th>Общая сумма</th> -->
+      </tr>
+    </thead>
+    
+	{% for customer in customers %}
+	    <tbody>
+	    	<tr>
+	    		<td>{{customer.name}}</td>
+	    		<td>{{customer.quantity}}</td>
+<!-- 	    		<td>{{customer.price}}</td>
+	    		<td>{{customer.quantity}}</td> -->
+	    	</tr>
+	    </tbody>
+	{% endfor %}
+
+{% endblock %}
